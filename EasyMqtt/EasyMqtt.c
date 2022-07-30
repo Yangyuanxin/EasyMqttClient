@@ -26,16 +26,8 @@ int EasyMqttUnInit(EasyMqttClient_t *Client)
 {
     Index = 0;
     memset(Table, 0, sizeof(Table));
-    if(0 != mqtt_release(Client))
-    {
-        free(Client);
-        Client = NULL;
-        return -1;
-    }
-    free(Client);
-    Client = NULL;
     pthread_mutex_destroy(&Mutex);
-    return 0;
+    return mqtt_release(Client);
 }
 
 int EasyMqttConnect(EasyMqttClient_t *Client)
@@ -97,7 +89,6 @@ int EasyMqttPublish(EasyMqttClient_t *Client, const char *Topic, enum EasyMqttQo
 
 
 #ifdef EASY_MQTT_TEST
-/*发布主题*/
 const char *PubTopic[] = 
 {
     "topic/EasyMqtt/pub/0123456789/0000",
