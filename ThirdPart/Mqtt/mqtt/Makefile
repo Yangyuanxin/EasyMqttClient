@@ -1,0 +1,10 @@
+obj-y += MQTTConnectClient.o
+obj-y += MQTTConnectServer.o
+obj-y += MQTTDeserializePublish.o
+obj-y += MQTTFormat.o
+obj-y += MQTTPacket.o
+obj-y += MQTTSerializePublish.o
+obj-y += MQTTSubscribeClient.o
+obj-y += MQTTSubscribeServer.o
+obj-y += MQTTUnsubscribeClient.o
+obj-y += MQTTUnsubscribeServer.o

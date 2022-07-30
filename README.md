@@ -24,3 +24,5 @@ int EasyMqttPublish(EasyMqttClient_t *Client, const char *Topic, enum EasyMqttQo
 ```
 void EasyMqttTest(void);
 ```
+
+目前仅在Linux上测试通过，后续继续在其它RTOS上使用测试。
