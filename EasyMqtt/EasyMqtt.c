@@ -2,6 +2,12 @@
 
 int Index = 0;
 pthread_mutex_t Mutex;
+struct TopicHandler_t
+{
+    const char *Topic;
+    void (*CallBack)(const char *Topic,char* Data,unsigned short Len);
+};
+
 struct TopicHandler_t Table[MAX_TOPIC];
 
 EasyMqttClient_t *EasyMqttInit(EasyMqttAttr_t *Attr)

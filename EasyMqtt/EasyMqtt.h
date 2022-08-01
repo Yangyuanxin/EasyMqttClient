@@ -10,11 +10,6 @@ extern "C" {
 #define EASY_MQTT_TEST
 #define MAX_TOPIC       64
 
-struct TopicHandler_t
-{
-    const char *Topic;
-    void (*CallBack)(const char *Topic,char* Data,unsigned short Len);
-};
 typedef mqtt_client_t EasyMqttClient_t;
 
 enum EasyMqttQos_t
