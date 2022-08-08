@@ -1,4 +1,6 @@
 # EasyMqttClient
+#### 1、项目简介
+
 这是一个基于杰杰大佬所封装的mqttclient精简调用接口版本，进一步降低了使用者的门槛
 (Github: https://github.com/jiejieTop/mqttclient)
 
@@ -26,3 +28,24 @@ void EasyMqttTest(void);
 ```
 
 目前仅在Linux上测试通过，后续继续在其它RTOS上使用测试。
+
+#### 2、编译运行方法
+
+##### 2.1、直接使用Makefile编译(不推荐-编译速度比较慢)
+
+```shell
+mkdir OutPut
+make -j8
+cd OutPut
+./a.out
+```
+
+##### 2.2、通过CMake生成Makefile然后再编译(推荐-编译速度更快)
+
+```shell
+mkdir build && cd build
+cmake ..
+make -j8
+./a.out
+```
+
